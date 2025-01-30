@@ -14,7 +14,7 @@ public class Main {
         String regex = "(10|[1-9])\\s[+*/\\-]\\s(10|[1-9])";
         if (!input.matches(regex)) {
             throw new IllegalArgumentException("Формат математической операции не удовлетворяет заданию - " +
-                    "два операнда и один оператор (+, -, /, *)");
+                    "два операнда (от 1 до 10) и один оператор (+, -, /, *)");
         }
         String[] args = input.split(" ");
         int arg1 = Integer.parseInt(args[0]);
